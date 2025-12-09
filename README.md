@@ -3,7 +3,7 @@
 # 🚀 Rekursif — Algoritma & Pemrograman
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Java-orange"> 
+  <img src="https://img.shields.io/badge/Language-Java-orange">
   <img src="https://img.shields.io/badge/Topic-Recursion-blue"> 
   <img src="https://img.shields.io/badge/Status-Complete-green">
 </p>
