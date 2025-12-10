@@ -8,15 +8,7 @@
   <img src="https://img.shields.io/badge/Status-Complete-green">
 </p>
 
-Repositori ini berisi kumpulan **program rekursif Java** yang dirancang untuk membantu memahami konsep dasar hingga lanjutan pada materi rekursif.
-
-README ini dibuat dengan tampilan **lebih estetik, rapi, dan mudah dibaca**, cocok untuk tugas besar, laporan praktikum, atau upload GitHub. **latihan rekursif** dari materi yang kamu berikan, lengkap dengan kode Java yang rapi, mudah dipelajari, dan siap dipakai untuk laporan maupun pengumpulan tugas besar.
-
-Repositori ini berisi solusi **praktik rekursif** (dari materi yang kamu kirim) beserta README dan contoh kode Java siap-compile.
-
 ## 📂 Struktur & Isi Project
-
-Berikut daftar file latihan rekursif yang tersedia:
 
 * `FaktorialPerulangan.java` — Faktorial menggunakan perulangan
 * `FaktorialRekursif.java` — Faktorial menggunakan rekursi
