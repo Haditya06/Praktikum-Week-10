@@ -39,7 +39,7 @@
 Pastikan Java JDK (versi 8 atau lebih baru) telah terpasang.
 
 ### 1. Kompilasi program
-```bash
+bash
 javac NamaFile.java
 2. Menjalankan program
 Contoh:
@@ -53,10 +53,9 @@ Salin kode
 5! = 120
 Beberapa program membutuhkan input argumen. Masukkan argumen langsung saat menjalankan program seperti contoh di atas.
 
-Contoh Program
+Contoh Program :
 FaktorialPerulangan.java
-java
-Salin kode
+```
 public class FaktorialPerulangan {
     public static void main(String[] args) {
         int angka = 5;
@@ -68,9 +67,11 @@ public class FaktorialPerulangan {
         System.out.println(angka + "! = " + hasil);
     }
 }
+```
+
 FaktorialRekursif.java
-java
-Salin kode
+
+```
 public class FaktorialRekursif {
     public static int hitungFaktorial(int n) {
         if (n == 0 || n == 1) {
@@ -85,9 +86,10 @@ public class FaktorialRekursif {
         System.out.println(angka + "! = " + hasil);
     }
 }
+```
 JumlahDigitRekursif.java
-java
-Salin kode
+
+```
 public class JumlahDigitRekursif {
     public static int jumlahDigit(int n) {
         if (n < 10) {
@@ -107,9 +109,9 @@ public class JumlahDigitRekursif {
         System.out.println("Total " + angka + " = " + jumlah);
     }
 }
+```
 BilanganPrimaRekursif.java
-java
-Salin kode
+```
 public class BilanganPrimaRekursif {
     public static boolean cekPrima(int n, int pembagi) {
         if (pembagi <= 1) {
@@ -143,9 +145,9 @@ public class BilanganPrimaRekursif {
         }
     }
 }
+```
 Sum1toNRekursif.java
-java
-Salin kode
+```
 public class Sum1toNRekursif {
     public static int sumToN(int n) {
         if (n <= 1) return n;
@@ -163,9 +165,9 @@ public class Sum1toNRekursif {
         System.out.println("Jumlah 1.." + n + " = " + hasil);
     }
 }
+```
 DecimalToBinaryRekursif.java
-java
-Salin kode
+```
 public class DecimalToBinaryRekursif {
     public static void printBinary(int n) {
         if (n > 1) {
@@ -190,9 +192,9 @@ public class DecimalToBinaryRekursif {
         System.out.println();
     }
 }
+```
 BinaryToDecimalRekursif.java
-java
-Salin kode
+```
 public class BinaryToDecimalRekursif {
     public static int binToDec(String s, int index) {
         int len = s.length();
@@ -214,3 +216,4 @@ public class BinaryToDecimalRekursif {
         System.out.println("Biner : " + s + ", desimalnya adalah " + desimal);
     }
 }
+```
