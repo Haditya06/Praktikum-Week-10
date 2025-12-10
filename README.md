@@ -1,6 +1,9 @@
-# Praktikum-Week-10
+# Praktikum Week 10  
+## Rekursif — Algoritma dan Pemrograman
 
-# 🚀 Rekursif — Algoritma & Pemrograman
+<p align="center">
+  <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java Logo" width="260"/>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Java-orange">
@@ -8,98 +11,84 @@
   <img src="https://img.shields.io/badge/Status-Complete-green">
 </p>
 
-## 📂 Struktur & Isi Project
+---
 
-* `FaktorialPerulangan.java` — Faktorial menggunakan perulangan
-* `FaktorialRekursif.java` — Faktorial menggunakan rekursi
-* `JumlahDigitRekursif.java` — Menjumlahkan digit sebuah angka (rekursif)
-* `BilanganPrimaRekursif.java` — Cek bilangan prima (rekursif)
-* `Sum1toNRekursif.java` — Menjumlahkan 1..N (rekursif)
-* `DecimalToBinaryRekursif.java` — Konversi desimal -> biner (rekursif, mencetak sisa bagi)
-* `BinaryToDecimalRekursif.java` — Konversi biner -> desimal (rekursif dengan indeks)
+## Struktur dan Isi Program
+
+- `FaktorialPerulangan.java` — Menghitung nilai faktorial menggunakan perulangan.
+- `FaktorialRekursif.java` — Menghitung nilai faktorial menggunakan fungsi rekursif.
+- `JumlahDigitRekursif.java` — Menjumlahkan semua digit pada bilangan menggunakan rekursi.
+- `BilanganPrimaRekursif.java` — Mengecek apakah bilangan adalah bilangan prima menggunakan rekursi.
+- `Sum1toNRekursif.java` — Menjumlahkan angka dari 1 hingga N menggunakan rekursi.
+- `DecimalToBinaryRekursif.java` — Konversi desimal ke biner menggunakan pembagian rekursif.
+- `BinaryToDecimalRekursif.java` — Konversi biner ke desimal menggunakan rekursi berdasarkan indeks.
 
 ---
 
-## 📘 Tujuan Pembelajaran
+## Tujuan Pembelajaran
 
-* Memahami konsep dasar rekursif
-* Menulis fungsi rekursif dengan parameter
-* Menganalisis alur eksekusi pemanggilan fungsi berulang
-* Membandingkan rekursi vs iterasi
+- Memahami konsep dan mekanisme kerja rekursi.
+- Mengimplementasikan fungsi rekursif dengan parameter.
+- Menganalisis proses pemanggilan fungsi secara bertingkat.
+- Mempelajari perbedaan pendekatan rekursif dan iteratif.
 
 ---
 
-## 🛠️ Cara Compile & Menjalankan Program
+## Cara Kompilasi dan Menjalankan Program
 
-Ikuti langkah berikut untuk menjalankan program Java: & jalankan
+Pastikan Java JDK (versi 8 atau lebih baru) telah terpasang.
 
-1. Pastikan terpasang Java JDK (versi 8+).
-2. Kompile:
-
+### 1. Kompilasi program
 ```bash
 javac NamaFile.java
-```
+2. Menjalankan program
+Contoh:
 
-3. Jalankan (contoh):
-
-```bash
+bash
+Salin kode
 java FaktorialRekursif 5
-# output: 5! = 120
-```
+Output:
 
-Untuk program yang menerima argumen sebagai input, berikan argumen pada `java` seperti contoh di setiap file.
+Salin kode
+5! = 120
+Beberapa program membutuhkan input argumen. Masukkan argumen langsung saat menjalankan program seperti contoh di atas.
 
----
-
-## 🧩 Contoh Kode Program
-
-Setiap file sudah dipisahkan dan ditulis dengan format coding yang bersih. Berikut beberapa contoh:
-
-### FaktorialPerulangan.java
-
-```java
+Contoh Program
+FaktorialPerulangan.java
+java
+Salin kode
 public class FaktorialPerulangan {
     public static void main(String[] args) {
-        int angka = 5; // Menghitung 5!
+        int angka = 5;
         int hasil = 1;
-        // Menghitung faktorial menggunakan perulangan
+
         for (int i = 1; i <= angka; i++) {
             hasil = hasil * i;
         }
         System.out.println(angka + "! = " + hasil);
     }
 }
-```
-
-### FaktorialRekursif.java
-
-```java
+FaktorialRekursif.java
+java
+Salin kode
 public class FaktorialRekursif {
-    // Fungsi rekursif untuk menghitung faktorial
     public static int hitungFaktorial(int n) {
-        // Program akan berhenti jika nilai n=0 atau n=1
         if (n == 0 || n == 1) {
             return 1;
         }
-        // Pemanggilan method rekursif
         return n * hitungFaktorial(n - 1);
     }
 
     public static void main(String[] args) {
-        int angka = 5; // Menghitung 5!
+        int angka = 5;
         int hasil = hitungFaktorial(angka);
-
         System.out.println(angka + "! = " + hasil);
     }
 }
-```
-
-### JumlahDigitRekursif.java
-
-```java
+JumlahDigitRekursif.java
+java
+Salin kode
 public class JumlahDigitRekursif {
-    // Proses rekursif akan diawali dari digit paling belakang
-    // hingga digit paling depan
     public static int jumlahDigit(int n) {
         if (n < 10) {
             return n;
@@ -108,34 +97,24 @@ public class JumlahDigitRekursif {
     }
 
     public static void main(String[] args) {
-        int angka = 0;
-        try {
-            if (args.length == 0) {
-                System.out.println("Silakan masukkan angka sebagai argumen.");
-                return;
-            }
-            angka = Integer.parseInt(args[0]);
-            int jumlah = jumlahDigit(angka);
-            System.out.println("Total " + angka + " = " + jumlah);
-        } catch (Exception e) {
-            System.out.println(e.toString());
+        if (args.length == 0) {
+            System.out.println("Silakan masukkan angka sebagai argumen.");
+            return;
         }
+
+        int angka = Integer.parseInt(args[0]);
+        int jumlah = jumlahDigit(angka);
+        System.out.println("Total " + angka + " = " + jumlah);
     }
 }
-```
-
-### BilanganPrimaRekursif.java
-
-```java
+BilanganPrimaRekursif.java
+java
+Salin kode
 public class BilanganPrimaRekursif {
-    // Fungsi rekursif untuk mengecek bilangan prima
-    // Data yang dicek akan dimulai dari pembagi..1
     public static boolean cekPrima(int n, int pembagi) {
-        // berhenti, dan dinyatakan prima jika pembaginya 1
         if (pembagi <= 1) {
             return true;
         }
-        // Jika n habis dengan modulus pembagi, maka bukan prima
         if (n % pembagi == 0) {
             return false;
         }
@@ -147,6 +126,7 @@ public class BilanganPrimaRekursif {
             System.out.println("Gunakan: java BilanganPrimaRekursif <angka>");
             return;
         }
+
         int angka = Integer.parseInt(args[0]);
 
         if (angka <= 1) {
@@ -163,14 +143,12 @@ public class BilanganPrimaRekursif {
         }
     }
 }
-```
-
-### Sum1toNRekursif.java
-
-```java
+Sum1toNRekursif.java
+java
+Salin kode
 public class Sum1toNRekursif {
     public static int sumToN(int n) {
-        if (n <= 1) return n; // sumToN(1) = 1, sumToN(0) = 0
+        if (n <= 1) return n;
         return n + sumToN(n - 1);
     }
 
@@ -179,18 +157,16 @@ public class Sum1toNRekursif {
             System.out.println("Gunakan: java Sum1toNRekursif <N>");
             return;
         }
+
         int n = Integer.parseInt(args[0]);
         int hasil = sumToN(n);
         System.out.println("Jumlah 1.." + n + " = " + hasil);
     }
 }
-```
-
-### DecimalToBinaryRekursif.java
-
-```java
+DecimalToBinaryRekursif.java
+java
+Salin kode
 public class DecimalToBinaryRekursif {
-    // Method rekursif yang mencetak sisa bagi (digit biner) mulai dari MSB
     public static void printBinary(int n) {
         if (n > 1) {
             printBinary(n / 2);
@@ -203,6 +179,7 @@ public class DecimalToBinaryRekursif {
             System.out.println("Gunakan: java DecimalToBinaryRekursif <desimal>");
             return;
         }
+
         int n = Integer.parseInt(args[0]);
         System.out.print("Desimal : " + n + ", binernya adalah: ");
         if (n == 0) {
@@ -213,19 +190,16 @@ public class DecimalToBinaryRekursif {
         System.out.println();
     }
 }
-```
-
-### BinaryToDecimalRekursif.java
-
-```java
+BinaryToDecimalRekursif.java
+java
+Salin kode
 public class BinaryToDecimalRekursif {
-    // Menggunakan rekursi dengan parameter string dan indeks
     public static int binToDec(String s, int index) {
         int len = s.length();
         if (index >= len) return 0;
+
         int bit = s.charAt(index) - '0';
-        // tempat nilai bit (dari kiri): 2^(len-1-index)
-        int weight = 1 << (len - 1 - index); // cocok jika len kecil
+        int weight = 1 << (len - 1 - index);
         return bit * weight + binToDec(s, index + 1);
     }
 
@@ -234,10 +208,9 @@ public class BinaryToDecimalRekursif {
             System.out.println("Gunakan: java BinaryToDecimalRekursif <biner>");
             return;
         }
+
         String s = args[0].trim();
         int desimal = binToDec(s, 0);
         System.out.println("Biner : " + s + ", desimalnya adalah " + desimal);
     }
 }
-```
-
